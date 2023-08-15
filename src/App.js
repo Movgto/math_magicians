@@ -1,8 +1,9 @@
 import './App.css';
+import Calculator from './components/Calculator';
 
 function App() {
   return (
-    <div className="App">Math Magician</div>
+    <div className="App"><Calculator /></div>
   );
 }
 
