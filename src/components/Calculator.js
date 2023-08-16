@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import '../stylesheets/calculator.scss';
 
-const Calculator = (props) => {
+function Calculator(props) {
   const { screen } = props;
   return (
     <div id="calculator">
@@ -38,7 +38,7 @@ const Calculator = (props) => {
       </div>
     </div>
   );
-};
+}
 
 Calculator.propTypes = {
   screen: PropTypes.string.isRequired,
