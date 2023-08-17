@@ -53,13 +53,54 @@ Live demo coming soon.
 
 To get a local copy up and running, follow these steps.
 
-### How to use
+### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need the following tools:
+- Node.js in your computer
+- IDE(e.g.: Vscode,...)
+- Terminal
 
-- Clone this repository using this command `git clone [repository link]`.
-- You need to have node package manager already installed in your system, check the installation process [here](https://nodejs.org/en/download) if you don't already have it.
-- Use `npm run start` to run the application locally hosted on port 3000, remember that you need to run this command on the root directory of the project.
+### Setup
+
+Clone this repository to your desired folder by running the following commands in your terminal:
+
+```sh
+  cd your-prefered-folder-name
+  
+  git clone https://github.com/Movgto/math_magicians.git
+```
+
+### Install
+
+- Install this project with:
+
+```sh
+  cd math_magicians
+
+  npm install or npm i
+```
+
+- Run an optimized build for production:
+```
+  npm run build
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```
+  npm start
+
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm run test
+```
 
 ## 👥 Authors <a name="authors"></a>
 
