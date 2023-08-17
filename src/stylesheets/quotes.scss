@@ -1,25 +1,25 @@
 #quotes {
-    display: flex;
-    flex-direction: column;
-    background-color: burlywood;
-    padding: 2rem;
-    max-width: 15rem;
-    overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  background-color: burlywood;
+  padding: 2rem;
+  max-width: 15rem;
+  overflow-wrap: break-word;
 
-    p {
-        font-size: 1.5rem;
+  p {
+    font-size: 1.5rem;
+  }
+
+  button {
+    background-color: #f5f5dc;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    transition: ease 200ms;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #b3b3a5;
     }
-
-    button {
-        background-color: #f5f5dc;
-        border: none;
-        padding: 0.4rem;
-        border-radius: 0.3rem;
-        transition: ease 200;
-
-        &:hover {
-            cursor: pointer;
-            background-color: #b3b3a5;
-        }
-    }
+  }
 }
