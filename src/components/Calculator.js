@@ -1,47 +1,48 @@
-import PropTypes from 'prop-types';
-import Button from './Button';
 import '../stylesheets/calculator.scss';
+import { useState } from 'react';
+import calculate from '../logic/calculate';
+import Screen from './Screen';
 
-function Calculator(props) {
-  const { screen } = props;
+function Calculator() {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
   return (
     <div id="calculator">
-      <div id="screen">{screen}</div>
+      <Screen total={state.total} next={state.next} />
       <div className="row">
-        <Button content="AC" />
-        <Button content="+/-" />
-        <Button content="%" />
-        <Button content="/" operator="true" />
+        <button className="button" type="button" onClick={() => setState(calculate(state, 'AC'))}>AC</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '+/-'))}>+/-</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '%'))}>%</button>
+        <button className="button operator" type="button" onClick={() => setState(calculate(state, '÷'))}>÷</button>
       </div>
       <div className="row">
-        <Button content="7" />
-        <Button content="8" />
-        <Button content="9" />
-        <Button content="X" operator="true" />
+        <button className="button" type="button" onClick={() => setState(calculate(state, '7'))}>7</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '8'))}>8</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '9'))}>9</button>
+        <button className="button operator" type="button" onClick={() => setState(calculate(state, 'x'))}>x</button>
       </div>
       <div className="row">
-        <Button content="4" />
-        <Button content="5" />
-        <Button content="6" />
-        <Button content="+" operator="true" />
+        <button className="button" type="button" onClick={() => setState(calculate(state, '4'))}>4</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '5'))}>5</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '6'))}>6</button>
+        <button className="button operator" type="button" onClick={() => setState(calculate(state, '+'))}>+</button>
       </div>
       <div className="row">
-        <Button content="1" />
-        <Button content="2" />
-        <Button content="3" />
-        <Button content="-" operator="true" />
+        <button className="button" type="button" onClick={() => setState(calculate(state, '1'))}>1</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '2'))}>2</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '3'))}>3</button>
+        <button className="button operator" type="button" onClick={() => setState(calculate(state, '-'))}>-</button>
       </div>
       <div className="row">
-        <Button content="0" operator="true" double="true" />
-        <Button content="." />
-        <Button content="=" operator="true" />
+        <button className="button double-width" type="button" onClick={() => setState(calculate(state, '0'))}>0</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '.'))}>.</button>
+        <button className="button" type="button" onClick={() => setState(calculate(state, '='))}>=</button>
       </div>
     </div>
   );
 }
-
-Calculator.propTypes = {
-  screen: PropTypes.string.isRequired,
-};
 
 export default Calculator;
