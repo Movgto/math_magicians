@@ -45,7 +45,7 @@ Building a calculator app with React
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Live demo coming soon.
+Live demo [here](https://movgto.github.io/math_magicians/build/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,14 +92,6 @@ To run the project, execute the following command:
 ```
   npm start
 
-```
-
-### Run tests
-
-To run tests, run the following command:
-
-```sh
-  npm run test
 ```
 
 ## 👥 Authors <a name="authors"></a>
