@@ -10,7 +10,7 @@
 
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: cadetblue;;
+  background-color: cadetblue;
 }
 
 .App {
@@ -50,7 +50,7 @@ nav li:last-child {
 
 .link {
   text-decoration: none;
-  color: solid black;
+  color: black;
 }
 
 #math-msg {
