@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  Route, Routes, BrowserRouter, NavLink,
+  Route, Routes, HashRouter, NavLink,
 } from 'react-router-dom';
 import App from './App';
 import Quotes from './components/Quotes';
@@ -10,7 +10,7 @@ import Home from './components/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <nav>
         <ul>
           <li><NavLink className="link" to="/">Home</NavLink></li>
@@ -25,6 +25,6 @@ root.render(
           <Route path="/quote" element={<Quotes />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 );
