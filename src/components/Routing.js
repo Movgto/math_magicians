@@ -5,7 +5,7 @@ import App from '../App';
 import Quotes from './Quotes';
 import Home from './Home';
 
-const apiKey = "aSn23Z2Z26ES8eaiczrw2w==SHUDji9fSQZwMG1g";
+const apiKey = 'aSn23Z2Z26ES8eaiczrw2w==SHUDji9fSQZwMG1g';
 
 const Routing = () => (
   <>

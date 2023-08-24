@@ -1,4 +1,6 @@
-import { render, screen, act, findByTestId } from '@testing-library/react';
+import {
+  render, screen, act,
+} from '@testing-library/react';
 import Routing from './Routing';
 
 describe('Navigation: tests proper navigation behavior when clicking links', () => {
@@ -13,10 +15,10 @@ describe('Navigation: tests proper navigation behavior when clicking links', () 
     render(<Routing />);
     const calculatorLink = screen.getByText('Calculator');
     act(() => {
-      calculatorLink.click()
+      calculatorLink.click();
     });
     screen.getByTestId('calculator');
-  })
+  });
 
   test('Navigation to Quote page', () => {
     render(<Routing />);

@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import '../stylesheets/quotes.scss';
 import { useState, useEffect } from 'react';
 
@@ -28,7 +28,7 @@ export default function Quotes({ apiKey }) {
     };
 
     fetchData();
-  }, []);
+  }, [apiKey]);
 
   if (error) {
     return (
@@ -60,3 +60,7 @@ export default function Quotes({ apiKey }) {
     );
   }
 }
+
+Quotes.propTypes = {
+  apiKey: PropTypes.string.isRequired,
+};
