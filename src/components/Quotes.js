@@ -2,7 +2,7 @@
 import '../stylesheets/quotes.scss';
 import { useState, useEffect } from 'react';
 
-export default function Quotes() {
+export default function Quotes({ apiKey }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -14,7 +14,7 @@ export default function Quotes() {
       try {
         const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
           method: 'GET',
-          headers: { 'X-Api-Key': 'aSn23Z2Z26ES8eaiczrw2w==SHUDji9fSQZwMG1g' },
+          headers: { 'X-Api-Key': apiKey },
           contentType: 'application/json',
         });
 
@@ -32,7 +32,7 @@ export default function Quotes() {
 
   if (error) {
     return (
-      <div id="quotes">
+      <div id="quotes" data-testid="quotes">
         <h3 className="error">
           Couldn&apost get data from source:
         </h3>
@@ -42,7 +42,7 @@ export default function Quotes() {
 
   if (loading) {
     return (
-      <div id="quotes">
+      <div id="quotes" data-testid="quotes">
         <h3>Loading...</h3>
       </div>
     );
@@ -50,7 +50,7 @@ export default function Quotes() {
 
   if (data.length > 0) {
     return (
-      <div id="quotes">
+      <div id="quotes" data-testid="quotes">
         <p>{data[0].quote}</p>
         <h3>
           {'- '}

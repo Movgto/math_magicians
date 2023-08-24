@@ -10,7 +10,7 @@ function Calculator() {
     operation: null,
   });
   return (
-    <div id="calculator">
+    <div id="calculator" data-testid="calculator">
       <Screen total={state.total} next={state.next} />
       <div className="row">
         <button className="button" type="button" onClick={() => setState(calculate(state, 'AC'))}>AC</button>

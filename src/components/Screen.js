@@ -16,6 +16,6 @@ export default function Screen(props) {
 }
 
 Screen.propTypes = {
-  total: PropTypes.string.isRequired,
-  next: PropTypes.string.isRequired,
+  total: PropTypes.string,
+  next: PropTypes.string,
 };
