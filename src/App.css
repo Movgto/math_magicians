@@ -24,7 +24,8 @@ html {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 0.2rem 1.4rem 0.1rem #1918188e;
   z-index: 5;
   position: absolute;
@@ -32,6 +33,10 @@ nav {
   background-color: white;
   top: 0;
   left: 0;
+}
+
+nav h1 {
+  padding: 1rem;
 }
 
 nav ul {

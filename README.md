@@ -45,7 +45,7 @@ Building a calculator app with React
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Live demo [here](https://movgto.github.io/math_magicians/build/)
+Live demo coming soon!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
