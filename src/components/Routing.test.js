@@ -1,7 +1,17 @@
 import {
   render, screen, act,
 } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import Routing from './Routing';
+
+describe('Snapshot', () => {
+  it('renders properly', () => {
+    const tree = renderer
+      .create(<Routing />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
 
 describe('Navigation: tests proper navigation behavior when clicking links', () => {
   test('Start at home page', () => {

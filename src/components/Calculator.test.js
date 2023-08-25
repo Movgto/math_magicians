@@ -1,6 +1,16 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import Calculator from './Calculator';
+
+describe('Snapshot', () => {
+  it('renders properly', () => {
+    const tree = renderer
+      .create(<Calculator />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
 
 describe('Calculator Component', () => {
   it('renders without errors', () => {
