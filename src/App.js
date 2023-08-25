@@ -1,12 +1,13 @@
 import './App.css';
 import Calculator from './components/Calculator';
-import Quotes from './components/Quotes';
 
 function App() {
   return (
     <div className="App">
+      <div id="math-msg">
+        <p>Let&apos;s do some math!</p>
+      </div>
       <Calculator />
-      <Quotes />
     </div>
   );
 }
